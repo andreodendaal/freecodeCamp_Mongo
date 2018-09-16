@@ -11,6 +11,9 @@
 // Add `mongodb` and `mongoose` to the project's `package.json`. Then require 
 // `mongoose`. Store your **mLab** database URI in the private `.env` file 
 // as `MONGO_URI`. Connect to the database using `mongoose.connect(<Your URI>)`
+  var mongoose = require('mongoose');
+  mongoose.connect('mongodb://andreodendaal:0mega101@ds257752.mlab.com:57752/freecodecamp_mongo');
+  //mongoose.connect(process.env.MONGO_URI);
 
 
 /** # SCHEMAS and MODELS #
