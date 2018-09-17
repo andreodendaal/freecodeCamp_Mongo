@@ -11,9 +11,11 @@
 // Add `mongodb` and `mongoose` to the project's `package.json`. Then require 
 // `mongoose`. Store your **mLab** database URI in the private `.env` file 
 // as `MONGO_URI`. Connect to the database using `mongoose.connect(<Your URI>)`
-  var mongoose = require('mongoose');
+  const mongoose = require('mongoose');
   mongoose.connect('mongodb://andreodendaal:0mega101@ds257752.mlab.com:57752/freecodecamp_mongo');
   //mongoose.connect(process.env.MONGO_URI);
+  mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
+
 
 
 /** # SCHEMAS and MODELS #
@@ -41,7 +43,21 @@
 
 // <Your code here >
 
-var Person /* = <Your Model> */
+//var Person /* = <Your Model> */
+const personSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  age: {
+    type: Number
+  },
+  favoriteFoods: {
+    type: [String]
+  }
+});
+
+const Person = mongoose.model('Person', personSchema);
 
 // **Note**: GoMix is a real server, and in real servers interactions with
 // the db are placed in handler functions, to be called when some event happens
