@@ -44,7 +44,8 @@
 // <Your code here >
 
 //var Person /* = <Your Model> */
-const personSchema = new mongoose.Schema({
+
+const personModel = new mongoose.Schema({
   name: {
     type: String,
     required: true
@@ -57,7 +58,7 @@ const personSchema = new mongoose.Schema({
   }
 });
 
-const Person = mongoose.model('Person', personSchema);
+const Person = mongoose.model('Person', personModel);
 
 // **Note**: GoMix is a real server, and in real servers interactions with
 // the db are placed in handler functions, to be called when some event happens
@@ -90,15 +91,27 @@ const Person = mongoose.model('Person', personSchema);
 
 // - Example -
 // ...
+
+
 // person.save(function(err, data) {
 //    ...do your stuff here...
 // });
 
 var createAndSavePerson = function(done) {
-  
-  done(null /*, data*/);
+ //   ... do something (risky) ...
+  var person = new Person( {name: 'Andre Odendaal', age: 53, favoriteFoods:['Steak', 'Egg']});
 
+  person.save(function(error, data){
+    if(error) {
+      return done(error);
+    }
+    done(null, data);
+    //person.save(data);
+    console.log(data + " saved to the DB");
+  });
 };
+
+//createAndSavePerson();
 
 /** 4) Create many People with `Model.create()` */
 
