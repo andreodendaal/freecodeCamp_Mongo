@@ -101,7 +101,7 @@ var createAndSavePerson = function(done) {
  //   ... do something (risky) ...
   var person = new Person( {name: 'Andre Odendaal', age: 53, favoriteFoods:['Steak', 'Egg']});
 
-  person.save(function(error, data){
+  person.save(function(error, data, done){
     if(error) {
       return done(error);
     }
@@ -122,12 +122,39 @@ var createAndSavePerson = function(done) {
 // Create many people using `Model.create()`, using the function argument
 // 'arrayOfPeople'.
 
-var createManyPeople = function(arrayOfPeople, done) {
-    
-    done(null/*, data*/);
-    
-};
+  // var createManyPeople = function(arrayOfPeople, done) {
+  //
+  //     for (var ctr = 0; ctr < arrayOfPeople.length; ctr++) {
+  //         const oneOfMany = new Person(arrayOfPeople[ctr]);
+  //
+  //         oneOfMany.save(function (error, data) {
+  //         if (error) {
+  //           console.log("Error in : " + data);
+  //         }
+  //         return done(null, data);
+  //         //person.save(data);
+  //         console.log(data + " saved to the DB");
+  //       });
+  //     }
+  // }
 
+var createManyPeople = function(arrayOfPeople, done) {
+    Person.create(arrayOfPeople, (err, data) => {
+      if(err) {
+        done(err);
+      }
+      done(null, data);
+    })
+  };
+
+var arrayofP = [
+  {name: 'Andre Odendaal1', age: 53, favoriteFoods:['Steak1', 'Egg1']},
+  {name: 'Andre Odendaal2', age: 54, favoriteFoods:['Steak2', 'Egg2']},
+  {name: 'Andre Odendaal3', age: 55, favoriteFoods:['Steak3', 'Egg3']},
+  {name: 'Andre Odendaal4', age: 56, favoriteFoods:['Steak4', 'Egg4']},
+  {name: 'Andre Odendaal5', age: 57, favoriteFoods:['Steak5', 'Egg5']}
+ ];
+createManyPeople(arrayofP);
 /** # C[R]UD part II - READ #
 /*  ========================= */
 

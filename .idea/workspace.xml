@@ -31,7 +31,7 @@
         <counts>
           <entry key="env" value="1" />
           <entry key="html" value="1" />
-          <entry key="js" value="5" />
+          <entry key="js" value="6" />
           <entry key="json" value="2" />
           <entry key="md" value="1" />
         </counts>
@@ -41,7 +41,7 @@
           <entry key=".env file" value="1" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="5" />
+          <entry key="JavaScript" value="6" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -53,7 +53,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="14" />
-          <entry key="js" value="358" />
+          <entry key="js" value="641" />
           <entry key="json" value="14" />
           <entry key="md" value="6" />
         </counts>
@@ -62,7 +62,7 @@
         <counts>
           <entry key=".env file" value="14" />
           <entry key="JSON" value="14" />
-          <entry key="JavaScript" value="358" />
+          <entry key="JavaScript" value="641" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
@@ -128,8 +128,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="113" column="2" selection-start-line="113" selection-start-column="2" selection-end-line="113" selection-end-column="2" />
+            <state relative-caret-position="470">
+              <caret line="113" column="10" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="497">
+              <caret line="131" selection-start-line="131" selection-end-line="131" />
             </state>
           </provider>
         </entry>
@@ -181,10 +190,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-1754" />
+    <option name="y" value="209" />
+    <option name="width" value="1279" />
+    <option name="height" value="679" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -331,12 +340,12 @@
       <option name="presentableId" value="Default" />
       <updated>1537063702852</updated>
       <workItem from="1537063707092" duration="356000" />
-      <workItem from="1537064338507" duration="14569000" />
+      <workItem from="1537064338507" duration="17967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14925000" />
+    <option name="totallyTimeSpent" value="18323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -430,10 +439,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/myApp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="113" column="2" selection-start-line="113" selection-start-column="2" selection-end-line="113" selection-end-column="2" />
+        <state relative-caret-position="470">
+          <caret line="113" column="10" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="10" />
         </state>
       </provider>
     </entry>
