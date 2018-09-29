@@ -139,12 +139,13 @@ var createAndSavePerson = function(done) {
   // }
 
 var createManyPeople = function(arrayOfPeople, done) {
-    Person.create(arrayOfPeople, (err, data) => {
-      if(err) {
-        done(err);
-      }
-      done(null, data);
-    })
+    Person.create(function(error, arrayOfPeople){
+      if(error) {return done(error);}
+      else {
+
+      return done(null, arrayOfPeople);}
+
+    });
   };
 
 var arrayofP = [
