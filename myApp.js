@@ -103,11 +103,14 @@ var createAndSavePerson = function(done) {
 
   person.save(function(error, data, done){
     if(error) {
-      return done(error);
+      //return done(error);
+      return error;
     }
-    done(null, data);
+    //done(null, data);
+    console.log(data + " saved person to the DB");
+    return(null, data)
     //person.save(data);
-    console.log(data + " saved to the DB");
+
   });
 };
 
@@ -133,21 +136,27 @@ var createAndSavePerson = function(done) {
   //         }
   //         return done(null, data);
   //         //person.save(data);
-  //         console.log(data + " saved to the DB");
-  //       });
-  //     }
-  // }
+//         console.log(data + " saved to the DB");
+//       });
+//     }
+// }
 
-var createManyPeople = function(arrayOfPeople, done) {
+var createManyPeople = function(done) {
+
     Person.create(function(error, arrayOfPeople){
-      if(error) {return done(error);}
+      if(error) {
+        console.log('Error on Insert')
+        //return done(error);}
+        return error;}
       else {
 
-      return done(null, arrayOfPeople);}
+      //return done(null, arrayOfPeople);}
+        console.log('Inserting...')
+        return (null, arrayOfPeople);}
 
     });
   };
-
+//createAndSavePerson();
 var arrayofP = [
   {name: 'Andre Odendaal1', age: 53, favoriteFoods:['Steak1', 'Egg1']},
   {name: 'Andre Odendaal2', age: 54, favoriteFoods:['Steak2', 'Egg2']},
@@ -156,6 +165,7 @@ var arrayofP = [
   {name: 'Andre Odendaal5', age: 57, favoriteFoods:['Steak5', 'Egg5']}
  ];
 createManyPeople(arrayofP);
+console.log('Ran Insert')
 /** # C[R]UD part II - READ #
 /*  ========================= */
 
