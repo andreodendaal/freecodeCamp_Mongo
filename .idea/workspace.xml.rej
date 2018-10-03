@@ -1,0 +1,10 @@
+diff a/.idea/workspace.xml b/.idea/workspace.xml	(rejected hunks)
+@@ -6,8 +6,6 @@
+       <change afterPath="$PROJECT_DIR$/../Javascript_scratch/src/recordCollection.js" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/../freecodeCamp_express/.idea/vcs.xml" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/../freecodeCamp_npm/.idea/modules.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/myApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/myApp.js" afterDir="false" />
+     </list>
+     <ignored path="$PROJECT_DIR$/.tmp/" />

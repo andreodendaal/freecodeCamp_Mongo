@@ -140,30 +140,29 @@ var createAndSavePerson = function(done) {
 //       });
 //     }
 // }
-//const People = mongoose.model;
-var createManyPeople = function(arrayOfPeople, done) {
 
-  Person.create(arrayOfPeople, function(error, arrayOfPeople){
+var createManyPeople = function(done) {
+
+    Person.create(function(error, arrayOfPeople){
       if(error) {
         console.log('Error on Insert')
         //return done(error);}
-        return (error);}
+        return error;}
       else {
 
       //return done(null, arrayOfPeople);}
-        console.log('Inserting...' + arrayOfPeople)
-        //return done(null, arrayOfPeople);}
+        console.log('Inserting...')
         return (null, arrayOfPeople);}
 
     });
   };
 //createAndSavePerson();
 var arrayofP = [
-  {name: 'Andre Odendaal6', age: 53, favoriteFoods:['Steak1', 'Egg1']},
-  {name: 'Andre Odendaal7', age: 54, favoriteFoods:['Steak2', 'Egg2']},
-  {name: 'Andre Odendaal8', age: 55, favoriteFoods:['Steak3', 'Egg3']},
-  {name: 'Andre Odendaal9', age: 56, favoriteFoods:['Steak4', 'Egg4']},
-  {name: 'Andre Odendaal10', age: 57, favoriteFoods:['Steak5', 'Egg5']}
+  {name: 'Andre Odendaal1', age: 53, favoriteFoods:['Steak1', 'Egg1']},
+  {name: 'Andre Odendaal2', age: 54, favoriteFoods:['Steak2', 'Egg2']},
+  {name: 'Andre Odendaal3', age: 55, favoriteFoods:['Steak3', 'Egg3']},
+  {name: 'Andre Odendaal4', age: 56, favoriteFoods:['Steak4', 'Egg4']},
+  {name: 'Andre Odendaal5', age: 57, favoriteFoods:['Steak5', 'Egg5']}
  ];
 createManyPeople(arrayofP);
 console.log('Ran Insert')
