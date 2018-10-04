@@ -99,7 +99,7 @@ const Person = mongoose.model('Person', personModel);
 
 var createAndSavePerson = function(done) {
  //   ... do something (risky) ...
-  var person = new Person( {name: 'Andre Odendaal', age: 53, favoriteFoods:['Steak', 'Egg']});
+  var person = new Person( {name: 'Andre Odendaal1', age: 53, favoriteFoods:['Steak', 'Egg']});
 
   person.save(function(error, data, done){
     if(error) {
@@ -125,29 +125,14 @@ var createAndSavePerson = function(done) {
 // Create many people using `Model.create()`, using the function argument
 // 'arrayOfPeople'.
 
-  // var createManyPeople = function(arrayOfPeople, done) {
-  //
-  //     for (var ctr = 0; ctr < arrayOfPeople.length; ctr++) {
-  //         const oneOfMany = new Person(arrayOfPeople[ctr]);
-  //
-  //         oneOfMany.save(function (error, data) {
-  //         if (error) {
-  //           console.log("Error in : " + data);
-  //         }
-  //         return done(null, data);
-  //         //person.save(data);
-//         console.log(data + " saved to the DB");
-//       });
-//     }
-// }
 
-var createManyPeople = function(done) {
+var createManyPeople = function(arrayOfPeople) {
 
-    Person.create(function(error, arrayOfPeople){
+    Person.create(arrayOfPeople, function(error, arrayOfPeople){
       if(error) {
         console.log('Error on Insert')
         //return done(error);}
-        return error;}
+        return (null, error);}
       else {
 
       //return done(null, arrayOfPeople);}
@@ -156,7 +141,9 @@ var createManyPeople = function(done) {
 
     });
   };
-//createAndSavePerson();
+//Tests
+//TODO Create tests
+
 var arrayofP = [
   {name: 'Andre Odendaal1', age: 53, favoriteFoods:['Steak1', 'Egg1']},
   {name: 'Andre Odendaal2', age: 54, favoriteFoods:['Steak2', 'Egg2']},
@@ -165,7 +152,9 @@ var arrayofP = [
   {name: 'Andre Odendaal5', age: 57, favoriteFoods:['Steak5', 'Egg5']}
  ];
 createManyPeople(arrayofP);
-console.log('Ran Insert')
+console.log('Ran Insert Call')
+
+//createAndSavePerson();
 /** # C[R]UD part II - READ #
 /*  ========================= */
 
@@ -177,12 +166,22 @@ console.log('Ran Insert')
 // It supports an extremely wide range of search options. Check it in the docs.
 // Use the function argument `personName` as search key.
 
-var findPeopleByName = function(personName, done) {
-  
-  done(null/*, data*/);
+var findPeopleByName = function(personName) {
 
+  Person.find(personName, function(error, docs){
+
+      if(error) {
+        //return done(error);}
+        return (error);}
+
+      //console.log(docs);
+      //return done(null, docs);
+      return docs;
+    }
+  );
 };
-
+//console.log('Finding...')
+//findPeopleByName({name:'Andre Odendaal1'})
 /** 6) Use `Model.findOne()` */
 
 // `Model.findOne()` behaves like `.find()`, but it returns **only one**
