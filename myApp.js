@@ -191,11 +191,14 @@ var findPeopleByName = function(personName) {
 // using `Model.findOne() -> Person`. Use the function
 // argument `food` as search key
 
-var findOneByFood = function(food, done) {
+var findPeopleByName = function(personName, done) {
+  Person.find({name: personName}, function(error, docs){
 
-  done(null/*, data*/);
-  
-};
+      if(error) {return done(error);}
+
+      return done(null, docs);
+    }
+  );
 
 /** 7) Use `Model.findById()` */
 
