@@ -143,7 +143,7 @@ var createManyPeople = function(arrayOfPeople) {
   };
 //Tests
 //TODO Create tests
-
+/*
 var arrayofP = [
   {name: 'Andre Odendaal1', age: 53, favoriteFoods:['Steak1', 'Egg1']},
   {name: 'Andre Odendaal2', age: 54, favoriteFoods:['Steak2', 'Egg2']},
@@ -153,7 +153,7 @@ var arrayofP = [
  ];
 createManyPeople(arrayofP);
 console.log('Ran Insert Call')
-
+*/
 //createAndSavePerson();
 /** # C[R]UD part II - READ #
 /*  ========================= */
@@ -180,6 +180,8 @@ var findPeopleByName = function(personName) {
     }
   );
 };
+
+
 //console.log('Finding...')
 //findPeopleByName({name:'Andre Odendaal1'})
 /** 6) Use `Model.findOne()` */
@@ -190,15 +192,17 @@ var findPeopleByName = function(personName) {
 // Find just one person which has a certain food in her favorites,
 // using `Model.findOne() -> Person`. Use the function
 // argument `food` as search key
-
-var findPeopleByName = function(personName, done) {
-  Person.find({name: personName}, function(error, docs){
+var findOneByFood = function(food, done) {
+  Person.findOne({favoriteFoods: food}, function(error, docs){
 
       if(error) {return done(error);}
-
+      console.log(docs);
       return done(null, docs);
     }
   );
+};
+
+
 
 /** 7) Use `Model.findById()` */
 
@@ -208,13 +212,19 @@ var findPeopleByName = function(personName, done) {
 // method for it. Find the (only!!) person having a certain Id,
 // using `Model.findById() -> Person`.
 // Use the function argument 'personId' as search key.
-
 var findPersonById = function(personId, done) {
-  
-  done(null/*, data*/);
-  
-};
 
+  Person.findById({_id: personId}, function(error, docs){
+
+      //if(error) {return done(error);}
+      if(error) {return error;}
+      console.log(docs);
+      //return done(null, docs);
+      return (null, docs);
+    }
+  );
+};
+findPersonById("5bb5a74c557a4050947e41dc");
 /** # CR[U]D part III - UPDATE # 
 /*  ============================ */
 
