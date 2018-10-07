@@ -218,13 +218,14 @@ var findPersonById = function(personId, done) {
 
       //if(error) {return done(error);}
       if(error) {return error;}
-      console.log(docs);
+      //console.log(typeof docs);
       //return done(null, docs);
+
       return (null, docs);
     }
   );
 };
-findPersonById("5bb5a74c557a4050947e41dc");
+//findPersonById("5bb5a74c557a4050947e41dc");
 /** # CR[U]D part III - UPDATE # 
 /*  ============================ */
 
@@ -251,11 +252,32 @@ findPersonById("5bb5a74c557a4050947e41dc");
 // (http://mongoosejs.com/docs/schematypes.html - #Mixed )
 
 var findEditThenSave = function(personId, done) {
-  var foodToAdd = 'hamburger';
-  
-  done(null/*, data*/);
-};
+  var foodToAdd = 'more hamburger';
+  Person.findById({_id: personId}, function(error, data){
+    //if(error) {return done(error);}
+    if(error) {
+      console.log('No Record Found');
+      return error;}
 
+    console.log(data.favoriteFoods);
+    data.favoriteFoods.push(foodToAdd);
+    console.log(data.favoriteFoods);
+    data.save();
+
+    if (error) {
+      //return done(error);
+      return error;
+    }
+    else {
+      //done(null, data);
+      console.log('Updated!')
+      return (null, data);
+  }
+  });
+  //done(null/*, data*/);
+};
+//Test # 8
+//findEditThenSave("5bb5a74c557a4050947e41dc");
 /** 9) New Update : Use `findOneAndUpdate()` */
 
 // Recent versions of `mongoose` have methods to simplify documents updating.
