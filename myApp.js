@@ -294,28 +294,23 @@ var findEditThenSave = function(personId, done) {
 // passes the unmodified object to its callback.
 
 
-//var findAndUpdate = function(personName, done) {
-//  var ageToSet = 20;
+var findAndUpdate = function(personName) {
 
-//  done(null/*, data*/);
-//};
-var findAndUpdate = function(personName, done) {
   var ageToSet = 20;
-  var update = {age: ageToSet};
-  var query = {_id: personName};
-  var options = { new: true };
-  Person.findByIdAndUpdate({name: personName}, options, function(error, data){
-    console.log(data);
-    if (error){
-      console.log(error);
-      return done(error);};
+
+  Person.findOneAndUpdate({name: personName},{age: ageToSet}, {returnNewDocument: true},
+    function(error, data){
+      //console.log("Processing...")
+      if (error){
+        //console.log(error);
+        return error};
     //Add to record
-
-    return data;
-
+      //console.log("Updated age to: " + ageToSet);
+      return data;
   });
 };
-
+//Test #9
+//findAndUpdate("Andre Odendaal1");
 
 /** # CRU[D] part IV - DELETE #
 /*  =========================== */
