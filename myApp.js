@@ -323,11 +323,22 @@ var findAndUpdate = function(personName) {
 // As usual, use the function argument `personId` as search key.
 
 var removeById = function(personId, done) {
-  
-  done(null/*, data*/);
+
+      Person.findByIdAndRemove({_id: personId},
+        function(error, data){
+      //console.log("Processing...")
+          if (error){
+        //console.log(error);
+          return error};
+      //Add to record
+        console.log("Deleted: " + personId);
+        return (null, data);
+    });
     
 };
 
+//Test
+//removeById("5bb5a74c557a4050947e41dc");
 /** 11) Delete many People */
 
 // `Model.remove()` is useful to delete all the documents matching given criteria.
