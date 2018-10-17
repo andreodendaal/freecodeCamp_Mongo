@@ -6,6 +6,8 @@
       <change afterPath="$PROJECT_DIR$/../Javascript_scratch/src/recordCollection.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../freecodeCamp_express/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../freecodeCamp_npm/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/myApp.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,7 +57,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="14" />
-          <entry key="js" value="1961" />
+          <entry key="js" value="2005" />
           <entry key="json" value="14" />
           <entry key="md" value="10" />
         </counts>
@@ -64,7 +66,7 @@
         <counts>
           <entry key=".env file" value="14" />
           <entry key="JSON" value="14" />
-          <entry key="JavaScript" value="1961" />
+          <entry key="JavaScript" value="2005" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
@@ -137,8 +139,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="335" column="7" lean-forward="true" selection-start-line="335" selection-start-column="7" selection-end-line="335" selection-end-column="7" />
+            <state relative-caret-position="452">
+              <caret line="363" column="7" lean-forward="true" selection-start-line="354" selection-start-column="1" selection-end-line="363" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -198,9 +200,9 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-1722" />
-    <option name="y" value="113" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1719" />
+    <option name="y" value="201" />
     <option name="width" value="1291" />
     <option name="height" value="680" />
   </component>
@@ -346,16 +348,15 @@
       <workItem from="1537064338507" duration="19779000" />
       <workItem from="1538455006414" duration="10000" />
       <workItem from="1538455130982" duration="16685000" />
-      <workItem from="1539494964213" duration="3293000" />
+      <workItem from="1539494964213" duration="4424000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40123000" />
+    <option name="totallyTimeSpent" value="41254000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6424658" visible="true" weight="0.10642782" />
       <window_info id="Structure" order="1" sideWeight="0.50161815" side_tool="true" weight="0.16280295" />
@@ -469,8 +470,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myApp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="335" column="7" lean-forward="true" selection-start-line="335" selection-start-column="7" selection-end-line="335" selection-end-column="7" />
+        <state relative-caret-position="452">
+          <caret line="363" column="7" lean-forward="true" selection-start-line="354" selection-start-column="1" selection-end-line="363" selection-end-column="7" />
         </state>
       </provider>
     </entry>

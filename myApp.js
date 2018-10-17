@@ -350,11 +350,24 @@ var removeById = function(personId, done) {
 // Don't forget to pass it to the `done()` callback, since we use it in tests.
 
 var removeManyPeople = function(done) {
-  var nameToRemove = "Mary";
+  var nameToRemove = "Andre Odendaal1";
 
-  done(null/*, data*/);
+  Person.remove({"name": nameToRemove},
+    function(error, data){
+      //console.log("Processing...")
+      if (error){
+        //console.log(error);
+        return error};
+      //Add to record
+      console.log("Deleted: " + nameToRemove);
+      return (null, data);
+    });
+
+
+  //done(null/*, data*/);
 };
 
+removeManyPeople();
 /** # C[R]UD part V -  More about Queries # 
 /*  ======================================= */
 
